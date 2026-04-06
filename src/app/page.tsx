@@ -4,7 +4,6 @@ import { AiPlatform } from "@/components/sections/AiPlatform";
 import { FAQ } from "@/components/sections/FAQ";
 import { GuideAndContact } from "@/components/sections/GuideAndContact";
 import { Hero } from "@/components/sections/Hero";
-import { MobileApp } from "@/components/sections/MobileApp";
 import { Modules } from "@/components/sections/Modules";
 import { SliderSection } from "@/components/sections/SliderSection";
 import { Standout } from "@/components/sections/Standout";
@@ -22,7 +21,6 @@ export default function Home() {
         <AiPlatform />
         <Testimonials />
         <FAQ />
-        <MobileApp />
         <GuideAndContact />
       </main>
       <Footer />

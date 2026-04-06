@@ -267,18 +267,17 @@ export function SliderSection() {
   }, [next]);
 
   return (
-    <Section className="py-14 sm:py-18">
-      <div className="flex flex-col gap-3">
-        <h2 className="text-2xl font-extrabold tracking-tight sm:text-3xl">
-          All the modules you’ll ever need in one software
+    <Section className="py-24 sm:py-32 bg-white border-t border-b border-gray-100">
+      <div className="flex flex-col items-center text-center gap-4 mb-16">
+        <h2 className="text-[2.5rem] sm:text-[3.5rem] font-black tracking-tight text-gray-900 leading-[1.1]">
+          See <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2563eb] to-[#8b5cf6]">WorkAura</span> in Action
         </h2>
-        <p className="max-w-3xl text-sm leading-6 text-[color:var(--color-muted)] sm:text-base">
-          Browse module highlights—each slide shows what teams use daily inside
-          WorkAura.
+        <p className="max-w-2xl text-[17px] leading-relaxed text-gray-500 font-medium">
+          Browse module highlights—each slide demonstrates exactly what teams use daily inside the platform.
         </p>
       </div>
 
-      <div className="mt-6 flex flex-wrap gap-2">
+      <div className="flex flex-wrap justify-center gap-3 mb-16">
         {slides.map((s, i) => {
           const active = i === idx;
           return (
@@ -286,10 +285,10 @@ export function SliderSection() {
               key={s.key}
               type="button"
               onClick={() => setIdx(i)}
-              className={`rounded-full px-4 py-2 text-xs font-extrabold transition ${
+              className={`rounded-full px-6 py-2.5 text-[14px] font-bold transition-all duration-300 ${
                 active
-                  ? "bg-[color:var(--color-brand-a)] text-white"
-                  : "border border-[color:var(--color-border)] bg-[color:var(--color-background)] text-[color:var(--color-muted)] hover:bg-[color:var(--color-surface)]"
+                  ? "bg-gray-900 text-white shadow-lg shadow-gray-900/20 scale-105"
+                  : "bg-gray-50 text-gray-500 hover:bg-gray-100 hover:text-gray-900"
               }`}
               aria-current={active}
             >
@@ -299,40 +298,43 @@ export function SliderSection() {
         })}
       </div>
 
-      <div className="mt-6 grid items-center gap-8 lg:grid-cols-2">
-        <div className="rounded-3xl border border-[color:var(--color-border)] bg-[color:var(--color-background)] p-6 sm:p-8">
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[color:var(--color-border)] bg-[color:var(--color-surface)] px-3 py-1 text-xs font-extrabold text-[color:var(--color-muted)]">
-            <span className="h-2 w-2 rounded-full bg-[color:var(--color-brand-b)]" />
-            {slide.chip}
+      <div className="mx-auto max-w-6xl grid items-center gap-12 lg:grid-cols-2 px-4">
+        <div className="flex flex-col gap-8 lg:pr-8">
+          <div>
+             <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-1.5 text-sm font-bold text-blue-600 mb-6">
+                <span className="flex h-2 w-2 rounded-full bg-blue-500" />
+                {slide.chip}
+             </div>
+             <h3 className="text-[2rem] font-black tracking-tight text-gray-900 leading-[1.1]">
+               {slide.heading}
+             </h3>
           </div>
-          <h3 className="mt-4 text-xl font-extrabold tracking-tight sm:text-2xl">
-            {slide.heading}
-          </h3>
 
-          <div className="mt-5 grid gap-4">
+          <div className="grid gap-6">
             {slide.points.map((p) => (
-              <div key={p.title} className="border-b border-[color:var(--color-border)] pb-4 last:border-b-0 last:pb-0">
-                <div className="text-sm font-extrabold">{p.title}</div>
-                <div className="mt-1 text-sm leading-6 text-[color:var(--color-muted)]">
+              <div key={p.title} className="group relative pl-6 border-l-2 border-gray-200 transition-colors hover:border-[#2563eb]">
+                <div className="absolute -left-[5px] top-[6px] h-2 w-2 rounded-full bg-gray-200 group-hover:bg-[#2563eb] transition-colors" />
+                <div className="text-[17px] font-bold text-gray-900">{p.title}</div>
+                <div className="mt-2 text-[15px] leading-relaxed text-gray-500">
                   {p.desc}
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-6 flex gap-2">
-            <Button variant="ghost" onClick={prev}>
-              Prev
-            </Button>
-            <Button variant="secondary" onClick={next}>
-              Next
-            </Button>
+          <div className="flex gap-4 pt-4 border-t border-gray-100 mt-2">
+            <button onClick={prev} className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 transition-all hover:bg-gray-50 hover:text-gray-900">
+               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+            </button>
+            <button onClick={next} className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 transition-all hover:bg-gray-50 hover:text-gray-900">
+               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+            </button>
           </div>
         </div>
 
-        <div className="relative overflow-hidden rounded-3xl border border-[color:var(--color-border)] bg-[color:var(--color-surface)] p-3 shadow-sm">
-          <div className="absolute right-4 top-4 z-10 flex items-center gap-2 rounded-full border border-[color:var(--color-border)] bg-[color:var(--color-background)]/80 px-3 py-1 text-xs font-extrabold text-[color:var(--color-muted)] backdrop-blur">
-            {idx + 1}/{slides.length}
+        <div className="relative overflow-hidden rounded-[32px] border border-gray-100 bg-white p-4 shadow-[0_20px_60px_rgba(0,0,0,0.06)] transform transition-transform hover:scale-[1.01] duration-500">
+          <div className="absolute right-8 top-8 z-10 flex items-center gap-2 rounded-full bg-white/90 backdrop-blur-md px-4 py-1.5 text-xs font-bold text-gray-900 shadow-sm border border-gray-100/50">
+            {idx + 1} / {slides.length}
           </div>
           <Image
             key={slide.image.src}
@@ -340,7 +342,7 @@ export function SliderSection() {
             alt={slide.image.alt}
             width={1100}
             height={700}
-            className="h-auto w-full rounded-2xl border border-[color:var(--color-border)] bg-white object-cover"
+            className="h-auto w-full object-cover rounded-[24px] border border-gray-50"
             priority={idx === 0}
           />
         </div>

@@ -38,7 +38,6 @@ export function HeroScene() {
         camera={{ position: [0, 0, 4.2], fov: 45 }}
         gl={{ antialias: true, alpha: true }}
       >
-        <color attach="background" args={["transparent"]} />
         <ambientLight intensity={0.7} />
         <directionalLight position={[4, 2, 6]} intensity={1.15} />
         <pointLight position={[-4, -2, 2]} intensity={0.65} />

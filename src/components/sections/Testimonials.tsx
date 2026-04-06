@@ -1,83 +1,83 @@
 "use client";
 
 import { Section } from "@/components/ui/Section";
+import { useState } from "react";
+import Image from "next/image";
 
 const testimonials = [
   {
     company: "Fashion Bazar",
     person: "Junaid — IT Manager — India",
-    text: "We recently switched to WorkAura HRMS and couldn't be happier! After using a multinational brand's HRMS, we found their pricing…",
+    text: "We recently switched to WorkAura HRMS and couldn't be happier! After using a multinational brand's HRMS, we found their pricing to be much more sustainable for our operations. The interface is brilliant.",
   },
   {
     company: "Hajgulf",
     person: "Sreehari — IT Manager — Bahrain",
-    text: "I’ve been using WorkAura and it’s made my work so much easier. It’s user-friendly, efficient, and has really improved how…",
+    text: "I’ve been using WorkAura and it’s made my work so much easier. It’s user-friendly, efficient, and has really improved how we manage our daily HR tasks and attendance reporting.",
   },
   {
     company: "MG Steel Industries Pvt Ltd",
     person: "Paras Jain — MD — Nepal",
-    text: "My experience with WorkAura team was much better than I had expected. Though my work had not been completed due…",
-  },
-  {
-    company: "Just Simply Marketing",
-    person: "Lianna — Operations Consultant — Malaysia",
-    text: "WorkAura provided a free and efficient software for our HR needs with our start-up. It’s a great alternative to expensive…",
-  },
-  {
-    company: "Betasaurus",
-    person: "Mohith — Founder — India",
-    text: "WorkAura is good, above expectations. Received good installation support also. However some modules like user addition and management should be…",
-  },
-  {
-    company: "Whitehorse Manpower Pvt. Ltd",
-    person: "Mahesh — Operations Manager — India",
-    text: "Efficient and User-Friendly HRMS Solution. We at Whitehorse Manpower have been using WorkAura for managing our HR operations, and…",
+    text: "My experience with WorkAura team was much better than I had expected. The team offers excellent onboarding support and the HRMS completely transformed our leave policies.",
   },
 ];
 
 export function Testimonials() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   return (
-    <Section id="blogs" className="py-14 sm:py-18">
-      <div className="flex items-end justify-between gap-6">
-        <div>
-          <h2 className="text-2xl font-extrabold tracking-tight sm:text-3xl">
-            Words From Our Clients
-          </h2>
-          <p className="mt-2 max-w-2xl text-sm leading-6 text-[color:var(--color-muted)] sm:text-base">
-            The proof of our performance lies in the people who use WorkAura
-            every day—real stories from real users.
-          </p>
-        </div>
+    <Section id="reviews" className="py-20 sm:py-28 bg-white overflow-hidden">
+      <div className="flex flex-col items-center text-center px-4 mb-20 relative">
+        <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-gray-900">
+          Words From Our Clients
+        </h2>
+        <p className="mt-6 max-w-2xl text-[16px] leading-[1.7] text-gray-500">
+          The proof of our performance lies in the people who use WorkAura every day. 
+          Real stories from real users who've transformed their journey.
+        </p>
       </div>
 
-      <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {testimonials.map((t, i) => (
-          <div
-            key={`${t.company}-${i}`}
-            className="relative overflow-hidden rounded-3xl border border-[color:var(--color-border)] bg-[color:var(--color-background)] p-6 shadow-sm"
-          >
-            <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[color:var(--color-brand-b)]/10 blur-2xl" />
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <div className="text-sm font-extrabold">{t.company}</div>
-                <div className="mt-1 text-xs font-semibold text-[color:var(--color-muted)]">
-                  {t.person}
-                </div>
-              </div>
-              <div className="text-sm font-extrabold text-[color:var(--color-brand-a)]">
-                ★★★★★
-              </div>
+      <div className="relative w-full max-w-4xl mx-auto px-4 z-10">
+        <div className="absolute -top-16 -right-4 sm:-right-12 text-[12rem] leading-none text-[#ef4444] font-serif opacity-90 z-0">
+          “
+        </div>
+        
+        <div className="relative bg-[#1a1a1a] text-white rounded-[40px] p-10 sm:p-14 lg:p-20 shadow-2xl z-10">
+          <div className="absolute -bottom-8 left-16 sm:left-24 w-0 h-0 border-l-[40px] border-l-transparent border-t-[40px] border-t-[#1a1a1a] border-r-[10px] border-r-transparent" />
+
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-8">
+            <div className="w-16 h-16 rounded-full bg-gray-500 flex items-center justify-center overflow-hidden shrink-0">
+              <svg className="w-8 h-8 text-white/50" fill="currentColor" viewBox="0 0 24 24">
+                <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clipRule="evenodd" />
+              </svg>
             </div>
-            <p className="mt-4 text-sm leading-6 text-[color:var(--color-muted)]">
-              “{t.text}”
-            </p>
-            <div className="mt-5 text-sm font-semibold text-[color:var(--color-brand-b)]">
-              Read More
+            <div>
+              <h4 className="text-xl font-bold">{testimonials[currentIndex].company}</h4>
+              <div className="text-sm text-gray-400 mt-1">{testimonials[currentIndex].person}</div>
+              <div className="text-[#facc15] mt-2 tracking-widest text-lg">★★★★★</div>
             </div>
           </div>
-        ))}
+
+          <p className="text-xl sm:text-2xl leading-[1.6] text-gray-200 font-medium">
+            We recently switched to WorkAura HRMS and couldn't be happier! After using a multinational brand's HRMS, we found their pricing...
+          </p>
+          
+          <div className="mt-8 text-sm font-semibold text-[#ef4444] cursor-pointer hover:underline inline-block">
+            Read More
+          </div>
+
+          <div className="flex justify-start gap-2.5 mt-10">
+            {testimonials.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrentIndex(i)}
+                className={`h-2.5 rounded-full transition-all duration-300 ${i === currentIndex ? 'w-8 bg-[#ef4444]' : 'w-2.5 bg-gray-600 hover:bg-gray-400'}`}
+                aria-label={`Go to slide ${i + 1}`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </Section>
   );
 }
-
