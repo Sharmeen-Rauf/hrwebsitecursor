@@ -269,7 +269,7 @@ export function SliderSection() {
   return (
     <Section className="py-24 sm:py-32 bg-white border-t border-b border-gray-100">
       <div className="flex flex-col items-center text-center gap-4 mb-16">
-        <h2 className="text-[2.5rem] sm:text-[3.5rem] font-black tracking-tight text-gray-900 leading-[1.1]">
+        <h2 className="text-[2rem] sm:text-[2.5rem] font-black tracking-tight text-gray-900 leading-[1.1]">
           See <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2563eb] to-[#8b5cf6]">WorkAura</span> in Action
         </h2>
         <p className="max-w-2xl text-[17px] leading-relaxed text-gray-500 font-medium">
@@ -305,7 +305,7 @@ export function SliderSection() {
                 <span className="flex h-2 w-2 rounded-full bg-blue-500" />
                 {slide.chip}
              </div>
-             <h3 className="text-[2rem] font-black tracking-tight text-gray-900 leading-[1.1]">
+             <h3 className="text-[1.5rem] font-black tracking-tight text-gray-900 leading-[1.1]">
                {slide.heading}
              </h3>
           </div>

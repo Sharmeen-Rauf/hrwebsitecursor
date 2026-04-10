@@ -29,7 +29,7 @@ export function Hero() {
            <svg className="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/></svg>
         </a>
 
-        <h1 className="text-balance text-[2.75rem] sm:text-[4.5rem] lg:text-[5rem] font-black leading-[1.05] tracking-[-0.03em] text-gray-900 drop-shadow-sm">
+        <h1 className="text-balance text-3xl sm:text-4xl lg:text-5xl font-black leading-[1.05] tracking-[-0.03em] text-gray-900 drop-shadow-sm">
           Empower Your HR With <br className="hidden md:block" />
           <span className="relative inline-block pb-2">
             <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-[#ff5a1f] to-[#e53935]">

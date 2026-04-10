@@ -67,7 +67,7 @@ export function FAQ() {
     <Section id="docs" className="py-24 sm:py-32 bg-[#fafafa]">
       <div className="mx-auto max-w-4xl">
         <div className="flex flex-col items-center text-center gap-4 mb-16 px-4">
-          <h2 className="text-[2.5rem] sm:text-[3.5rem] font-black tracking-tight text-gray-900 leading-[1.1]">
+          <h2 className="text-[2rem] sm:text-[2.5rem] font-black tracking-tight text-gray-900 leading-[1.1]">
             Frequently Asked Questions
           </h2>
           <p className="max-w-2xl text-[17px] text-gray-500 font-medium">

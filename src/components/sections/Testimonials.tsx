@@ -28,7 +28,7 @@ export function Testimonials() {
   return (
     <Section id="reviews" className="py-20 sm:py-28 bg-white overflow-hidden">
       <div className="flex flex-col items-center text-center px-4 mb-20 relative">
-        <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-gray-900">
+        <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-gray-900">
           Words From Our Clients
         </h2>
         <p className="mt-6 max-w-2xl text-[16px] leading-[1.7] text-gray-500">

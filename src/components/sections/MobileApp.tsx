@@ -12,7 +12,7 @@ export function MobileApp() {
 
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div>
-            <h2 className="text-2xl font-extrabold tracking-tight sm:text-3xl">
+            <h2 className="text-xl font-extrabold tracking-tight sm:text-2xl">
               Experience Smart HR with WorkAura Mobile App
             </h2>
             <p className="mt-3 text-sm leading-6 text-[color:var(--color-muted)] sm:text-base">

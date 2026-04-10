@@ -74,7 +74,7 @@ export function AiPlatform() {
   return (
     <Section id="ai-intelligence" className="py-20 sm:py-24 bg-[#fbfbfb]">
       <div className="flex flex-col gap-3 text-center px-4">
-        <h2 className="text-3xl font-black tracking-tight sm:text-4xl text-gray-900">
+        <h2 className="text-2xl font-black tracking-tight sm:text-3xl text-gray-900">
           AI Workforce Intelligence Platform
         </h2>
         <p className="mt-2 text-[15px] leading-relaxed text-gray-500 max-w-2xl mx-auto">

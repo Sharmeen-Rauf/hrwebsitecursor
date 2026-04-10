@@ -82,7 +82,7 @@ export function Modules() {
     <Section id="crm" className="py-24 sm:py-32 bg-[#fafafa]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center mb-20">
-          <h2 className="text-[2.5rem] sm:text-[3.5rem] font-black tracking-tight text-gray-900 leading-[1.1]">
+          <h2 className="text-[2rem] sm:text-[2.5rem] font-black tracking-tight text-gray-900 leading-[1.1]">
             All the modules you’ll ever need
           </h2>
           <p className="mt-6 max-w-2xl text-lg text-gray-500 font-medium">

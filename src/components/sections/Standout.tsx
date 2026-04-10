@@ -37,7 +37,7 @@ export function Standout() {
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center mb-20">
-          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-white mb-6">
+          <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-white mb-6">
             What makes WorkAura <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5a1f] to-[#ff8c42]">Stand Out</span>
           </h2>
           <p className="max-w-2xl text-[17px] leading-relaxed text-gray-400">

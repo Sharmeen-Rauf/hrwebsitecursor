@@ -17,7 +17,7 @@ export function GuideAndContact() {
       />
 
       <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-4xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-black tracking-tight text-gray-900 mb-6">
+        <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-gray-900 mb-6">
           For queries contact
         </h2>
         
